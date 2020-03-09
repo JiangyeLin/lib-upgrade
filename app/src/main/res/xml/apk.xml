@@ -1,0 +1,9 @@
+<resources>
+    <paths>
+        <external-cache-path path="open/" name="open"/>
+        <external-path
+            path="Android/data/com.tairanmall.app/"
+            name="camera_photos" />
+        <external-path path="." name="external_storage_root" />
+    </paths>
+</resources>

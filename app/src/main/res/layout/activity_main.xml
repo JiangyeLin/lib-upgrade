@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tvCurVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="当前版本号" />
+
+    <EditText
+        android:id="@+id/etVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="版本号"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/tvCurVersion" />
+
+    <EditText
+        android:id="@+id/etLowestVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="最低版本号(最低版本号高于当前版本号，则修正为强制更新)"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/etVersion" />
+
+    <TextView
+        android:id="@+id/tvType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="更新类型"
+        app:layout_constraintTop_toBottomOf="@+id/etLowestVersion" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tvType">
+
+        <RadioButton
+            android:id="@+id/rbForce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="强制更新" />
+
+        <RadioButton
+            android:id="@+id/rbNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一般更新" />
+
+        <RadioButton
+            android:id="@+id/rbSilence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="静默更新（下载完成后再提示）" />
+
+        <RadioButton
+            android:id="@+id/rbIgnore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可忽略更新（可以选择不再提示）" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="更新"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+</androidx.constraintlayout.widget.ConstraintLayout>

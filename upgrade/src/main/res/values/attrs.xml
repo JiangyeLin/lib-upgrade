@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FormLayout">
+        <attr name="relative_width" format="float" />
+        <attr name="relative_height" format="float" />
+        <attr name="relative_left" format="float" />
+        <attr name="relative_top" format="float" />
+        <attr name="w_h_ratio" format="float" />
+        <attr name="base_on_width" format="boolean" />
+    </declare-styleable>
+</resources>

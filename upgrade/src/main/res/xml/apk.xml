@@ -1,0 +1,5 @@
+<resources>
+    <paths>
+        <external-cache-path path="apk/" name="apk"/>
+    </paths>
+</resources>
